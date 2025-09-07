@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Build/cache
+*.egg-info/
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Checkpoints / big binaries (先不推)
+logs/
+checkpoints/
+*.pt
+*.onnx

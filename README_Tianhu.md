@@ -222,6 +222,16 @@ sudo kill -9 <PID>
 
 
 
+
+DDSROSActionProvider（新）
+
+Simulation 端：
+
+source /opt/ros/humble/setup.bash
+source ~/Desktop/unitree_ros2/cyclonedds_ws/install/setup.bash
+conda activate isaaclab310
+python sim_main.py --device cuda:0 --enable_cameras   --task Isaac-Waste-Sort-G129-Dex3 --robot_type g129 --action_source ros
+
 ros2端：
 # 先清掉旧配置
 unset CYCLONEDDS_URI
@@ -236,3 +246,4 @@ source /opt/ros/humble/setup.bash
 source ~/Desktop/unitree_ros2/cyclonedds_ws/install/setup.bash
 conda activate isaaclab310
 source ~/Desktop/unitree_ros2/setup_default.sh # 不指定网卡
+./install/unitree_ros2_example/bin/g1_arm7_control

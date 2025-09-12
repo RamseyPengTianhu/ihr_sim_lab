@@ -222,3 +222,17 @@ sudo kill -9 <PID>
 
 
 
+ros2端：
+# 先清掉旧配置
+unset CYCLONEDDS_URI
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+export ROS_DOMAIN_ID=0
+source /opt/ros/humble/setup.bash
+source ~/Desktop/unitree_ros2/cyclonedds_ws/install/setup.bash
+# 如果要用 unitree_ros2 里的消息/例程，再：
+source ~/Desktop/unitree_ros2/unitree_ros2_ws/install/setup.bash
+
+source /opt/ros/humble/setup.bash
+source ~/Desktop/unitree_ros2/cyclonedds_ws/install/setup.bash
+conda activate isaaclab310
+source ~/Desktop/unitree_ros2/setup_default.sh # 不指定网卡

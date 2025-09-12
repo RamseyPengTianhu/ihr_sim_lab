@@ -431,10 +431,6 @@ class ROSIKActionProvider(ActionProvider):
             quat_wxyz: torch.Tensor = self._target["quat"]     # (4,)
             frame = self._target.get("frame", "world")
 
-            print('pos:',pos_t)
-            print('quat:',quat_wxyz)
-            print('frame:',frame)
-
 
             # 组装 Pink 的目标（保持与 DDS 版一致，直接用当前 Transform 的 copy 再改平移/旋转）
 

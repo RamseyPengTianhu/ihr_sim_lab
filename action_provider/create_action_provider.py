@@ -40,7 +40,9 @@ def create_action_provider(env,args):
     elif args.action_source == "ros_ik":
         from action_provider.action_provider_ros_ik import ROSIKActionProvider
         return ROSIKActionProvider(env=env, args_cli=args)
-
+    elif args.action_source == "ros":
+        from action_provider.action_provider_ros import ROSLowCmdActionProvider
+        return ROSLowCmdActionProvider(env=env, args_cli=args)
     else:
         print(f"unknown action source: {args.action_source}")
         return None
